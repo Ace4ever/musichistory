@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quick Introductions to Moqups/Playground Moqups</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<header>
+<header class="my-header">
+  <nav class="bordered">
+  <a href="#">View Music</a>|<a href="#">Add Music</a>|<a href="#">Profile</a>
+  </nav>
+</header>
+<form>
+<div class="blue-box bordered">
+  <fieldset>
+    <label for="song-length">Song Length:</label>
+    <input type="range" name="song-length" min="15" max="25" step="0.5" value="18.5">
+  </fieldset> 
+    <br/>
+  <fieldset>
+    <label for="artists">Artist:</label><br/>
+    <input name="artists" list="artists">
+      <datalist id="artists">
+        <option value="Shania Twain">
+        <option value="Metallica">
+        <option value="Lifehouse">
+        <option value="Bon Jovi">
+        <option value="Miranda Lambert">
+        <option value="Meghan Trainor">
+        <option value="Brantley Gilbert">
+        <option value="AC/DC">AC/DC</option>
+      </datalist>
+    </fieldset>
+  <br/>
+    <fieldset>
+      <label for="albums">Albums:</label><br/>
+        <input name="albums" list="albums">
+            <datalist id="albums">
+            <option value="Up">
+            <option value="Metallica">
+            <option value="Lifehouse">
+            <option value="Bon Jovi">
+            <option value="Miranda Lambert">
+            <option value="Meghan Trainor">
+            <option value="Brantley Gilbert">
+            <option value="AC/DC">
+          </datalist>
+    </fieldset>
+      <br/>
+    <fieldset>
+      <label for"genre">Genre:</label>
+      <br/>
+        <div class="left">
+          <p><input type="checkbox" name="rock" value="rock"> Rock</p>
+          <p><input type="checkbox" name="blues" value="blues"> Blue</p>
+          <p><input type="checkbox" name="pop" value="pop"> Pop</p>
+        </div>
+        <div class="right">
+          <p><input type="checkbox" name="country" value="country">Country</p>
+          <p><input type="checkbox" name="jazz" value="jazz"> Jazz</p>
+          <p><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</p>
+        </div>
+    </fieldset>
+</form>
+  </div>
+  <div class="yellow-box bordered">
+    <h1>Song Name</h1>
+      <p class="space">Artist name | Album name | Genre </p>
+    <h1>Song Name</h1>
+      <p class="space">Artist name | Album name | Genre </p>
+    <h1>Song Name</h1>
+      <p class="space">Artist name | Album name | Genre </p>
+  </div>
+</body>
+</html>
