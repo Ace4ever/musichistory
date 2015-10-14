@@ -1,3 +1,59 @@
+.flex-container {
+  padding: 0;
+  list-style: none;
+/*  height: 50em*/;
+  display: flex;
+  -webkit-flex-direction: ;
+  -webkit-flex-wrap: wrap;
+}
+
+.flex-container > header { 
+    flex: 1 100%;
+    background-color: #FFB4B0;
+    margin-bottom: 10px;
+}
+
+a {
+    color: darkviolet;
+    font-weight: bold;
+    padding: 10px;
+}
+
+a.visited {
+    color: darkblue;
+}
+
+.left-box { 
+    flex-grow: 1;
+    background-color: #4DD7FA;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.left-box > section {
+    margin-bottom: 5px;
+}
+
+.checkbox-right {
+    position: absolute; top: 13.3em;
+    position: absolute; left: 6.5em;
+}
+
+.right-box { 
+    flex-grow: 10;
+    background-color: #FEFAC0;
+}
+
+.right-box > h1 {
+    color: #785616;
+}
+
+.flex-item {  
+  padding: 10px;
+  border: 3px solid rgba(0,0,0,.2);
+}
+
+/*
 body{
     position: relative;
 }
@@ -29,7 +85,7 @@ nav {
 
 .bordered {
     border: 2px solid black;
-    padding-left: 5px;
+    /*padding-left: 5px;
 }
 
 fieldset {
@@ -60,3 +116,4 @@ h1 {
 #bottom {
     line-height: 25px;
 }
+*/*/
