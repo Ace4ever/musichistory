@@ -1,72 +1,61 @@
-.flex-container {
-  padding: 0;
-  list-style: none;
-/*  height: 50em*/;
-  display: flex;
-  -webkit-flex-direction: ;
-  -webkit-flex-wrap: wrap;
+body {
+  font-family: Arial;
+  width: 98%;
+  height: 100%
 }
 
-.flex-container > header { 
-    flex: 1 100%;
-    background-color: #FFB4B0;
-    margin-bottom: 10px;
+body::after {
+  content: "";
+  background: url(musicBackground.jpeg);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
-a {
-    color: darkviolet;
-    font-weight: bold;
+header {
     padding: 10px;
+    font-family: mySecondFont;
+    font-size: 50px;
+    text-align: center;
 }
 
-a.visited {
-    color: darkblue;
+ul {
+  list-style-type: none;
 }
 
-.left-box { 
-    flex-grow: 1;
-    background-color: #4DD7FA;
-    margin-right: 15px;
-    font-size: 20px;
-}
-
-.left-box > section {
-    margin-bottom: 5px;
-}
-
-.checkbox-right {
-    position: absolute; top: 13.3em;
-    position: absolute; left: 6.5em;
-}
-
-.right-box { 
-    flex-grow: 10;
-    background-color: #FEFAC0;
-}
-
-.right-box > h1 {
-    color: #785616;
-}
-
-.flex-item {  
-  padding: 10px;
-  border: 3px solid rgba(0,0,0,.2);
-}
-
-/*
-body{
-    position: relative;
-}
 
 nav {
     width: 100%;
-    background-color: #FFB4B0;
-    padding: 20px 0;
-    min-height: 10%;
+    background-color: black;
+}
+
+nav ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 2);
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
 }
 
 .blue-box {
-    background-color: #4DD7FA;
     width: 23%;
     padding: 5px;
     margin: 10px 0 0 0;
@@ -76,7 +65,6 @@ nav {
 
 .yellow-box {
     float: right;
-    background-color: #FEFAC0;
     width: 73%;
     margin: 10px 0 0 0;
     padding: 5px;
@@ -85,7 +73,7 @@ nav {
 
 .bordered {
     border: 2px solid black;
-    /*padding-left: 5px;
+    padding-left: 5px;
 }
 
 fieldset {
@@ -107,13 +95,69 @@ h1 {
     padding: 10px;
 }
 
-.space {
+/*.space {
     padding: 10px;
     font-weight: 15px;
     word-spacing: 10px;
-}
+}*/
 
 #bottom {
     line-height: 25px;
 }
-*/*/
+
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('my font isnt funky enough.ttf'); 
+}
+
+@font-face {
+    font-family: 'mySecondFont';
+    src: url('krinkes/KrinkesDecorPERSONAL.ttf'); 
+}
+
+.theseSongs {
+    padding: 10px;
+    font-family: myFirstFont;
+}
+
+.newSong {
+    padding: 10px;
+    font-family: myFirstFont;
+}
+
+button {
+    background-color: #1C1C1C;
+    color: lightblue;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    display: block;
+    margin-left: 40%;
+}
+
+#addMusic {
+    text-align: center;
+    padding: 8px;
+
+}
+
+#addMusic > div {
+    padding: 8px;
+}
+
+
+
+#addMusic > button {
+    background-color: #1C1C1C;
+    color: lightblue;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    display: block;
+    margin-left: 50%;
+}
+
