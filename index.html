@@ -19,7 +19,7 @@ Music History
    </ul>
   </nav>
   <div id="listMusic">    
-    <div class="blue-box bordered">
+    <div class="filter-box bordered">
       <div>
         <fieldset>
           <div>
@@ -90,16 +90,16 @@ Music History
           </div>
         </fieldset>
           <div>
-            <button type="button">Filter</button>
+            <button type="button" id="filterButton">Filter</button>
           </div>
       </div>
 
-      <div class="yellow-box bordered" id="songs">
+      <div class="song-box bordered" id="songs">
         <h2>Song List:</h2>
         <div id="song-list"></div>
       </div>
   </div>
-  <div class="bordered" id="addMusic">
+  <div class="bordered fadeInRight" id="addMusic">
     <div>
       <label for="songName">Song Name:</label>
       <input type="textbox" name="songName" id="nameField">
@@ -114,7 +114,12 @@ Music History
       <label for="album">Album:</label>
       <input type="textbox" name="album" id="albumField">
     </div>
-        <button type="button" id="addButton">Add</button>
+    <div>
+      <button type="button" id="addButton">Add</button>
+      <a href="#listMusic" id="doneButton">
+        <button type="button">Done</button>
+        </a>
+    </div>
   </div>
 
   <script src="songs.js"></script>

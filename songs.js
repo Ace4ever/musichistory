@@ -44,40 +44,40 @@ document.getElementById("listLink").addEventListener("click", function() {
 	hiddenList.style.display = 'block';
 });
 
-
 var song = document.getElementById("nameField");
 var artist = document.getElementById("artistField");
 var album = document.getElementById("albumField");
-// var everything = document.getElementById("songs");
-// var addBtn = 
 
 document.getElementById("addButton").addEventListener("click", function addButton () {
-	var songName = song.value;
-	var artistName = artist.value;
-	var albumName = album.value;
+
+
 	printMessage(songBox);
 
 
 	function printMessage (songBox) {
- 	songBox.innerHTML = "<div class='newSong'>" + songName + " - by " +
- 	artistName + " on the album " + albumName + "</div>" + songBox.innerHTML;
+ 	songBox.innerHTML = "<div class='newSong'>" + song.value + " - by " +
+ 	artist.value + " on the album " + album.value + "</div>" + songBox.innerHTML;
+
+ 	song.focus();
 		
 	}
-
-
-  	clearInput();
+  	clearInput();  		
 
   	function clearInput() {
   		song.value = "";
   		artist.value = "";
   		album.value = "";
   	} 
+  	
 });
 
 console.log(songBox);
 
 
-
+document.getElementById("doneButton").addEventListener("click", function() {
+	hiddenAdd.style.display = 'none';
+	hiddenList.style.display = 'block';
+});
 
 
 
