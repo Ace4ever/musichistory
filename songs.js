@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var songs = [];
 var mySongs = ""
 
@@ -22,19 +24,19 @@ for (var i = 0; i < songs.length; i++) {
 
 };
 
-	var songBox = document.getElementById("song-list");
+	var songBox = $("#song-list");
 	songBox.innerHTML = mySongs;
 	console.log(songBox.innerHTML);
 
 
-var hiddenAdd = document.getElementById("addMusic");
-var hiddenList = document.getElementById("listMusic")
+var hiddenAdd = $("#addMusic");
+var hiddenList = $("#listMusic")
 
 hiddenAdd.style.display = 'none';
 hiddenList.style.display = 'block';
 
 
-document.getElementById("addLink").addEventListener("click", function() {
+$("#addLink").click function() {
 	hiddenAdd.style.display = 'block';
 	hiddenList.style.display = 'none';
 });
