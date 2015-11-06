@@ -1,0 +1,180 @@
+$font-stack:    Arial, sans-serif;
+$primary-color: #000;
+$linkColor: #fff;
+$background: url(../musicBackground.jpeg);
+$myFirstFont: funky;
+$mySecondFont: krinkes;
+
+// creates two fonts
+
+@font-face {
+    font-family: 'funky';
+    src: url('../my font isnt funky enough.ttf'); 
+}
+
+@font-face {
+    font-family: 'krinkes';
+    src: url('../krinkes/KrinkesDecorPERSONAL.ttf'); 
+}
+
+// set body background
+
+body {
+  font-family: $font-stack;
+  width: 98%;
+  height: 100%
+}
+
+body::after {
+  content: "";
+  background: $background;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+// header styling
+
+header {
+    padding: 10px;
+    font-family: $mySecondFont;
+    font-size: 50px;
+    text-align: center;
+}
+
+// navigation
+
+ul {
+  list-style-type: none;
+}
+
+.navbar-inverse {
+    border: 5px solid $linkColor;
+}
+
+nav {
+    width: 100%;
+    font-size: 25px;
+    ul {
+        overflow: hidden;
+        margin: 0;
+        // padding: 5px;
+        li {
+            list-style: none;
+            float: left;
+            text-align: center;
+            // border-left: 1px solid $primary-color;
+            // border-right: 1px solid #ccc;
+            width: 16.6667%;
+            width: calc(100% / 2);
+            box-sizing: border-box;
+        }
+    }
+}
+
+#addMusic {
+    text-align: center;
+    padding: 8px;
+
+}
+
+#addMusic > div {
+    padding: 8px;
+}
+
+a {
+    color: $linkColor;
+}
+
+// filter box stylizing
+
+.filter-box {
+    // width: 23%;
+    padding: 5px;
+    margin: 10px 0 0 0;
+    min-height: 500px;
+    // float: left;
+}
+
+// style song list
+
+h3 {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.song-box {
+    // float: right;
+    // width: 73%;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    min-height: 500px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.theseSongs {
+    padding: 10px;
+    font-family: $myFirstFont;
+    font-size: 18px;
+}
+
+.newSong {
+    padding: 10px;
+    font-family: $myFirstFont;
+}
+
+// adds border
+
+.bordered {
+    border: 2px solid $primary-color;
+    padding-left: 5px;
+}
+
+// subtracts border from fieldsets
+
+fieldset {
+    border: none;
+}
+
+// .left{
+//     display: inline;
+//     float: left;
+// }
+
+// .right{
+//     display: inline;
+//     float: right;
+// }
+
+
+// styling buttons
+
+button {
+    background-color: #1C1C1C;
+    color: lightblue;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+    padding: 8px;
+    display: inline;
+    /*margin-left: 40%;*/
+}
+
+ #filterButton {
+    margin-left: 40%;
+}
+
+#doneButton {
+    text-decoration: none;
+}
+
+
+
+

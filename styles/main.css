@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'funky';
+  src: url("../my font isnt funky enough.ttf"); }
+@font-face {
+  font-family: 'krinkes';
+  src: url("../krinkes/KrinkesDecorPERSONAL.ttf"); }
+body {
+  font-family: Arial, sans-serif;
+  width: 98%;
+  height: 100%; }
+
+body::after {
+  content: "";
+  background: url(../musicBackground.jpeg);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+header {
+  padding: 10px;
+  font-family: krinkes;
+  font-size: 50px;
+  text-align: center; }
+
+ul {
+  list-style-type: none; }
+
+.navbar-inverse {
+  border: 5px solid #fff; }
+
+nav {
+  width: 100%;
+  font-size: 25px; }
+  nav ul {
+    overflow: hidden;
+    margin: 0; }
+    nav ul li {
+      list-style: none;
+      float: left;
+      text-align: center;
+      width: 16.6667%;
+      width: calc(100% / 2);
+      box-sizing: border-box; }
+
+#addMusic {
+  text-align: center;
+  padding: 8px; }
+
+#addMusic > div {
+  padding: 8px; }
+
+a {
+  color: #fff; }
+
+.filter-box {
+  padding: 5px;
+  margin: 10px 0 0 0;
+  min-height: 500px; }
+
+h3 {
+  padding: 10px;
+  font-weight: bold; }
+
+.song-box {
+  margin: 10px 0 0 0;
+  padding: 5px;
+  min-height: 500px;
+  height: 500px;
+  overflow-y: scroll; }
+
+.theseSongs {
+  padding: 10px;
+  font-family: funky;
+  font-size: 18px; }
+
+.newSong {
+  padding: 10px;
+  font-family: funky; }
+
+.bordered {
+  border: 2px solid #000;
+  padding-left: 5px; }
+
+fieldset {
+  border: none; }
+
+button {
+  background-color: #1C1C1C;
+  color: lightblue;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 8px;
+  display: inline;
+  /*margin-left: 40%;*/ }
+
+#filterButton {
+  margin-left: 40%; }
+
+#doneButton {
+  text-decoration: none; }
+
+/*# sourceMappingURL=main.css.map */

@@ -3,120 +3,138 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Musichistory 4</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <body>
+  <div class="container-fluid">
+    <header class="my-header bordered">
+      Music History
+    </header>
 
-<header class="my-header bordered">
-Music History
-</header>
-  <nav>
-   <ul>
-    <li><a href="#listMusic" id="listLink">List Music</a></li>
-    <li><a href="#addMusic" id="addLink">Add Music</a></li>
-   </ul>
-  </nav>
-  <div id="listMusic">    
-    <div class="filter-box bordered">
-      <div>
-        <fieldset>
-          <div>
-             <label for="song-length">Song Length:</label>
-          </div>
-          <div>
-            <input type="range" name="song-length" min="15" max="25" step="0.5" value="18.5">
-          </div>
-        </fieldset> 
-      </div>
-      
-      <div>
-        <fieldset>
-          <div>
-            <label for="artists">Bread:</label>
-          </div>
-          <div>
-            <input name="bread" list="bread">
-          </div>
-            <datalist id="artists">
-              <option value="White">
-              <option value="Wheat">
-            </datalist>
+
+    <nav class="navbar navbar-inverse">
+      <ul>
+        <li><a href="#listMusic" id="listLink">List Music</a></li>
+        <li><a href="#addMusic" id="addLink">Add Music</a></li>
+      </ul>
+    </nav>
+
+    <div id="listMusic" class="row">
+      <div class="col-md-3">
+        <div class="filter-box bordered">
+          <fieldset>
+            <div>
+               <label for="song-length">Song Length:</label>
+            </div>
+            <div>
+              <input type="range" name="song-length" min="15" max="25" step="0.5" value="18.5">
+            </div>
+          </fieldset> 
+        
+        
+          <fieldset>
+            <div>
+              <label for="artists">Artist:</label>
+            </div>
+            <div>
+              <input name="artists" list="artists">
+            </div>
+              <datalist id="artists">
+                <option value="Shania Twain">
+                <option value="Metallica">
+                <option value="Lifehouse">
+                <option value="Bon Jovi">
+                <option value="Miranda Lambert">
+                <option value="Meghan Trainor">
+                <option value="Brantley Gilbert">
+                <option value="AC/DC">
+              </datalist>
+            </fieldset>
+    
+          <fieldset>
+            <div>
+              <label for="albums">Album:</label>
+            </div>
+
+            <div>
+              <input name="albums" list="albums">
+            </div>
+              <datalist id="albums">
+                <option value="Up">
+                <option value="Black">
+                <option value="Lifehouse">
+                <option value="Bon Jovi">
+                <option value="Platnium">
+                <option value="Title">
+                <option value="Bottoms Up">
+                <option value="AC/DC">
+              </datalist>
           </fieldset>
-      </div>
-
-      <div>
-        <fieldset>
-          <div>
-            <label for="albums">Meat:</label>
-          </div>
-
-          <div>
-            <input name="meat" list="meat">
-          </div>
-            <datalist id="meat">
-              <option value="ham">
-              <option value="turkey">
-              <option value="chicken">
-              <option value="bacon">
-              <option value="pastromi">
-              <option value="steak">
-              <option value="Bottoms Up">
-              <option value="AC/DC">
-            </datalist>
-        </fieldset>
-      </div>
-
-        <fieldset>
-          <div>
-            <label for"genre">Genre:</label>
-          </div>
-          <div class="left">
-            <p><input type="checkbox" name="rock" value="rock"> Rock</p>
-            <p><input type="checkbox" name="blues" value="blues"> Blue</p>
-            <p><input type="checkbox" name="pop" value="pop"> Pop</p>
-          </div>
-          <div class="right">
-            <p><input type="checkbox" name="country" value="country">Country</p>
-            <p><input type="checkbox" name="jazz" value="jazz"> Jazz</p>
-            <p><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</p>
-          </div>
-        </fieldset>
+        
+          <fieldset>
+            <div>
+              <label for"genre">Genre:</label>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left">
+                  <p><input type="checkbox" name="rock" value="rock"> Rock</p>
+                  <p><input type="checkbox" name="blues" value="blues"> Blue</p>
+                  <p><input type="checkbox" name="pop" value="pop"> Pop</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right">
+                  <p><input type="checkbox" name="country" value="country">Country</p>
+                  <p><input type="checkbox" name="jazz" value="jazz"> Jazz</p>
+                  <p><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</p>
+                </div>
+              </div>
+          </fieldset>
+        
           <div>
             <button type="button" id="filterButton">Filter</button>
           </div>
+        </div>
       </div>
 
-      <div class="song-box bordered" id="songs">
-        <h2>Song List:</h2>
-        <div id="song-list"></div>
+      <div class="col-md-9">
+        <div class="song-box bordered" id="songs">
+          <h3>Song List:</h3>
+          <div id="song-list"></div>
+        </div>
       </div>
-  </div>
-  <div class="bordered fadeInRight" id="addMusic">
-    <div>
-      <label for="songName">Song Name:</label>
-      <input type="textbox" name="songName" id="nameField">
     </div>
 
-    <div>
-      <label for="artist">Artist:</label>
-      <input type="textbox" name="artist" id="artistField">
-    </div>
 
-    <div>
-      <label for="album">Album:</label>
-      <input type="textbox" name="album" id="albumField">
-    </div>
-    <div>
-      <button type="button" id="addButton">Add</button>
-      <a href="#listMusic" id="doneButton">
-        <button type="button">Done</button>
+    <div class="bordered fadeInRight" id="addMusic">
+      <div>
+        <label for="songName">Song Name:</label>
+        <input type="textbox" name="songName" id="nameField">
+      </div>
+
+      <div>
+        <label for="artist">Artist:</label>
+        <input type="textbox" name="artist" id="artistField">
+      </div>
+
+      <div>
+        <label for="album">Album:</label>
+        <input type="textbox" name="album" id="albumField">
+      </div>
+      <div>
+        <button type="button" id="addButton">Add</button>
+        <a href="#listMusic" id="doneButton">
+          <button type="button">Done</button>
         </a>
+      </div>
     </div>
   </div>
-
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="songs.js"></script>
+  <script data-main="javascripts/entry" src="./lib/bower_components/requirejs/require.js"></script>
+  <script src="./lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html> 
