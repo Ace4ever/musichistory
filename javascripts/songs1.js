@@ -30,6 +30,7 @@ define(["jquery"], function($) {
 		console.log(songBox.html);
 
 
+
 	var hiddenAdd = $("#addMusic");
 	var hiddenList = $("#listMusic");
 
@@ -84,6 +85,44 @@ define(["jquery"], function($) {
 		hiddenAdd.hide();
 		hiddenList.show();
 	});
+	
+	var songName = $("#songSearch");
+	var artistName = $("#artistSearch");
+	var albumName = $("#albumSearch");
+	// var songList = $(".newSong");
+
+
+	$("#filterButton").click(function (e) {
+		// var thisSong = songList.val();
+		// console.log(thisSong);
+
+		var searchArtist = artistName.val();
+		console.log("searchArtist:", searchArtist);
+
+		var searchSong = songName.val();
+		console.log("searchSong:", searchSong);
+
+		var searchAlbum = albumName.val();
+		console.log("searchAlbum:", searchAlbum);
+
+		
+
+		// for (var i = 0; i < songBox.html.length; i++) {
+		// 	if (searchArtist === songBox[i]) {
+		// 		console.log("songBox:",songBox[i]);
+
+		// 		songBox.html("Here are the songs you're looking for" + songBox[]);
+				
+				// printMessage = songBox.html[i];
+				// songBox.html(songBox[i]);
+		// 	};
+			
+		// };
+	});
 });
+
+
+
+
 
 
