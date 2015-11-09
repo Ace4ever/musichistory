@@ -1,0 +1,66 @@
+{
+	"songs": [
+	{
+		"title": "Photograph",
+		"artist": "Ed Sheeran",
+		"album": "X (Deluxe Edition)"
+	},
+
+	{
+		"title": "Legs",
+		"artist": "ZZTop",
+		"album": "Eliminator"
+	},
+
+	{
+		"title": "The Logical Song",
+		"artist": "Supertramp",
+		"album": "Breakfast in America"
+	},
+	{
+		"title": "Another Brick in the Wall",
+		"artist": "Pink Floyd",
+		"album": "The Wall"
+	},
+	{
+		"title": "Welcome to the Jungle",
+		"artist": "Guns 'N Roses",
+		"album": "Appetite for Destruction"
+	},
+	{
+		"title": "Ironic",
+		"artist": "Alanis Morisette",
+		"album": "Jagged Little Pill"
+	},
+	{
+		"title": "I Like the Sound of That",
+		"artist": "Rascal Fatts",
+		"album": "Rewind"
+	},
+
+	{
+		"title": "Megahn Trainor feat. John Legend",
+		"artist": "Like I'm Gonna Lose You",
+		"album": "Title"
+	},
+
+	{
+		"title": "You Rock My World",
+		"artist": "Michael Jackson",
+		"album": "Number Ones"
+	},
+
+	{
+		"title": "The Man I Wanna Be",
+		"artist": "Chris Young",
+		"album": "The Man I Wanna Be"
+	},
+	{
+		"title": "Livin' On A Prayer",
+		"artist": "Bon Jovi",
+		"album": "Slippery When Wet"
+	}
+
+
+		]
+}
