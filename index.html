@@ -1,140 +1,160 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Music History Page</title>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+  </head>
 
-<body>
+  <body>
+    <!-- **************HEADER******************** -->
+  <h1>Music History</h1>
+    <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <header class="my-header bordered">
-      Music History
-    </header>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
 
-
-    <nav class="navbar navbar-inverse">
-      <ul>
-        <li><a href="#listMusic" id="listLink">List Music</a></li>
-        <li><a href="#addMusic" id="addLink">Add Music</a></li>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a id="list-music" href="#">Playlist</a></li>
+        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
+        
       </ul>
-    </nav>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-    <div id="listMusic" class="row">
-      <div class="col-md-3">
-        <div class="filter-box bordered">
-          <fieldset>
-            <div>
-               <label for="song-length">Song Title:</label>
+      <!-- <header id="main-header">
+          <div id="top-header">
+            <div id="logo">
+              <h1>Music History</h1>
             </div>
-            <div>
-              <input type="search" name="songTitle" id="songSearch">
+            <div id="discription">
+              <h3>Probably the best playlist app ever....  probably.</h3>
             </div>
-          </fieldset> 
-        
-        
-          <fieldset>
-            <div>
-              <label for="artists">Artist:</label>
-            </div>
-            <div>
-              <input type="search" name="artists" id="artistSearch">
-            </div>
-<!--               <datalist id="artists">
-                <option value="Shania Twain">
-                <option value="Metallica">
-                <option value="Lifehouse">
-                <option value="Bon Jovi">
-                <option value="Miranda Lambert">
-                <option value="Meghan Trainor">
-                <option value="Brantley Gilbert">
-                <option value="AC/DC">
-              </datalist> -->
-            </fieldset>
-    
-          <fieldset>
-            <div>
-              <label for="albums">Album:</label>
-            </div>
-
-            <div>
-              <input type="search" name="albums" id="albumSearch">
-            </div>
-<!--               <datalist id="albums">
-                <option value="Up">
-                <option value="Black">
-                <option value="Lifehouse">
-                <option value="Bon Jovi">
-                <option value="Platnium">
-                <option value="Title">
-                <option value="Bottoms Up">
-                <option value="AC/DC">
-              </datalist> -->
-          </fieldset>
-        
-          <fieldset>
-            <div>
-              <label for"genre">Genre:</label>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left">
-                  <p><input type="checkbox" name="rock" value="rock"> Rock</p>
-                  <p><input type="checkbox" name="blues" value="blues"> Blue</p>
-                  <p><input type="checkbox" name="pop" value="pop"> Pop</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right">
-                  <p><input type="checkbox" name="country" value="country">Country</p>
-                  <p><input type="checkbox" name="jazz" value="jazz"> Jazz</p>
-                  <p><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</p>
-                </div>
-              </div>
-          </fieldset>
-        
-          <div>
-            <button type="button" id="filterButton">Filter</button>
+          </div>
+          <div id="bottom-header" class="clear-float">
+            <div id="nav-bar">
+            <ul id="nav-list">
+              <li><a href="#">Home</a></li>
+              <li id="list-music" class="leftnavborder"><a href="#">List Music</a></li>
+              <li id="add-music" class="leftnavborder"><a href="#">Add Music</a></li>
+            </ul>
           </div>
         </div>
+      </header>
+      <header id="invisible-header">
+        <ul id="nav-bar">
+          <li><a href="#">View Music</a></li>
+          <li class="leftnavborder"><a href="#">Add Music</a></li>
+          <li class="leftnavborder"><a href="#">Profile</a></li>
+        </ul>
+      </header> -->
+<!-- ****************ADD MUSIC FEATURE************************ -->
+    <div id="body-div">
+      <div id="body-container">
+    <div class="container-fluid">
+     <div class="row">
+          <div id="myModal" class="modal fade col-sm-12" role="dialog">
+         <div id="form-container">    
+      <ul id="enter-song-info">
+            <li id="song-info-header">Enter song info:</li>
+            <li>Title:</li>
+            <li><input type="text" id="song-title" placeholder="Enter title here"></li>
+            <li>Artist:</li>  
+            <li><input type="text" id="song-artist" placeholder="Enter artist here"></li>
+            <li>Album:</li>  
+            <li><input type="text" id="song-album" placeholder="Enter album here"></li>   
+            <li><button id="add" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
+          </ul>
       </div>
-
-      <div class="col-md-9">
-        <div class="song-box bordered" id="songs">
-          <h3>Song List:</h3>
-          <div id="song-list"></div>
+      </div>
+  <!--_________SIDE NAV BAR___________________-->
+      <div class="col-sm-3" id="side-nav">
+      <form method="post">
+        <div class="inner-side-nav">
+          <label for="song-length">Song length:</label>
+          <input type="range" name="song-length" min="0" max="10" step="1" value="5">
         </div>
+        <div class="inner-side-nav">
+          <label for="artist">Artist:</label>
+          <select id="artist">
+            <option>Options</option>
+            <option>The Beatles</option>
+            <option>Michael Jackson</option>
+            <option>Tom Petty</option>
+            <option>Eagles</option>
+            <option>Pearl Jam</option>
+          </select> 
+        </div>
+        <div class="inner-side-nav">
+          <label for="album">Album:</label>
+          <select id="album">
+            <option>Options</option>
+            <option>Abbey Road</option>
+            <option>Thriller</option>
+            <option>Damn The Torpedos</option>
+            <option>Hotel California</option>
+            <option>Ten</option>
+          </select>
+        </div>
+        <div class="inner-side-nav">
+          <label>Genre:</label>
+            
+              <table>
+                <tr>
+                      <td><input type="checkbox" name="rock" value="rock"> Rock</td>
+                      <td><input type="checkbox" name="pop" value="pop"> Pop</td>
+                  <tr>
+                      <td><input type="checkbox" name="blues" value="blues"> Blues</td>
+                      <td><input type="checkbox" name="classical" value="classical"> Classical</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                      <td><input type="checkbox" name="jazz" value="jazz"> Jazz</td>
+                      <td><input type="checkbox" name="hiphop" value="hiphop"> Hip Hop</td>
+                  </tr>
+                </table>
+              
+        </div>
+        <div class="clear-float">
+            <input type="submit" value="Filter" style="width: 100px;">
+        </div>
+      </form>
+      </div>
+    
+  <!--____________________MAIN WINDOW___________________-->
+    
+      <div class="col-sm-7 col-sm-push-1" id="main-window">
+      <div id="song-list-container">
+      <!-- <div id="song-container">
+      <h2>Something</h2>
+      <ul class="song-info">
+            <li>The Beatles</li>
+            <li class="song-info-border">Abbey Road</li>
+            <li class="song-info-border">Pop</li>
+          </ul>
+        </div> -->
+          </div>
+          <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
       </div>
     </div>
-
-
-    <div class="bordered fadeInRight" id="addMusic">
-      <div>
-        <label for="songName">Song Name:</label>
-        <input type="textbox" name="songName" id="nameField">
-      </div>
-
-      <div>
-        <label for="artist">Artist:</label>
-        <input type="textbox" name="artist" id="artistField">
-      </div>
-
-      <div>
-        <label for="album">Album:</label>
-        <input type="textbox" name="album" id="albumField">
-      </div>
-      <div>
-        <button type="button" id="addButton">Add</button>
-        <a href="#listMusic" id="doneButton">
-          <button type="button">Done</button>
-        </a>
-      </div>
-    </div>
+     </div>
+    </div>  
   </div>
-  <script data-main="javascripts/entry" src="./lib/bower_components/requirejs/require.js"></script>
-  <script src="./lib/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
-</html> 
+  <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+  </body>
+
+ </html>
