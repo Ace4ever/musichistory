@@ -49,47 +49,55 @@ header {
 
 // navigation
 
-ul {
-  list-style-type: none;
+#navigation {
+    background-color: $linkColor;
 }
 
-.navbar-inverse {
-    border: 5px solid $linkColor;
-}
 
-nav {
-    width: 100%;
-    font-size: 25px;
-    ul {
-        overflow: hidden;
-        margin: 0;
-        // padding: 5px;
-        li {
-            list-style: none;
-            float: left;
-            text-align: center;
-            // border-left: 1px solid $primary-color;
-            // border-right: 1px solid #ccc;
-            width: 16.6667%;
-            width: calc(100% / 2);
-            box-sizing: border-box;
-        }
-    }
-}
+// ul {
+//   list-style-type: none;
+// }
 
-#addMusic {
-    text-align: center;
-    padding: 8px;
+// // .navbar-default {
+// //     border: 5px solid $linkColor;
+// //     width: 100%;
+// //     text-align: center;
+// // }
 
-}
+// .navbar {
+//     background-color: $linkColor;
+//     width: 100%;
+//     font-size: 25px;
+//     // ul {
+//         overflow: hidden;
+//         margin: 0;
+//         // padding: 5px;
+//         // li {
+//             list-style: none;
+//             float: left;
+//             text-align: center;
+//             // border-left: 1px solid $primary-color;
+//             // border-right: 1px solid #ccc;
+//             width: 16.6667%;
+//             width: calc(100% / 3);
+//             box-sizing: border-box;
+//         // }
+//     // }
+// }
 
-#addMusic > div {
-    padding: 8px;
-}
+// #addMusic {
+//     text-align: center;
+//     padding: 8px;
 
-a {
-    color: $linkColor;
-}
+// }
+
+// #addMusic > div {
+//     padding: 8px;
+// }
+
+// a {
+//     color: $linkColor;
+// }
 
 // filter box stylizing
 

@@ -10,12 +10,12 @@
 
   <body>
     <!-- **************HEADER******************** -->
-  <h1>Music History</h1>
+    <div class="container-fluid">
+      <header class="my-header bordered">Music History</header>
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<!--     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -23,18 +23,26 @@
       </button>
       
     </div>
+ -->
+<!-- 
+     <nav class="navbar navbar-inverse">
+      <ul>
+        <li><a href="#listMusic" id="listLink">List Music</a></li>
+        <li><a href="#addMusic" id="addMusic">Add Music</a></li>
+      </ul>
+    </nav> -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Home</a></li>
-        <li><a id="list-music" href="#">Playlist</a></li>
-        <li><a id="add-music" href="#" data-toggle="modal" data-target="#myModal">Add Music</a></li>
+        <li><a id="listLink" href="#">Playlist</a></li>
+        <li><a id="addLink" href="#" data-toggle="music" data-target="#addingMusic">Add Music</a></li>
         
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </div><!-- <!/.navbar-collapse -->
+  </div> <!--/.container-fluid -->
+</nav> 
 
       <!-- <header id="main-header">
           <div id="top-header">
@@ -65,30 +73,30 @@
 <!-- ****************ADD MUSIC FEATURE************************ -->
     <div id="body-div">
       <div id="body-container">
-    <div class="container-fluid">
-     <div class="row">
-          <div id="myModal" class="modal fade col-sm-12" role="dialog">
-         <div id="form-container">    
-      <ul id="enter-song-info">
-            <li id="song-info-header">Enter song info:</li>
-            <li>Title:</li>
-            <li><input type="text" id="song-title" placeholder="Enter title here"></li>
-            <li>Artist:</li>  
-            <li><input type="text" id="song-artist" placeholder="Enter artist here"></li>
-            <li>Album:</li>  
-            <li><input type="text" id="song-album" placeholder="Enter album here"></li>   
-            <li><button id="add" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
-          </ul>
+        <div class="container-fluid">
+          <div class="row">
+            <div id="addingMusic" class="modal fade col-sm-12" role="dialog">
+              <div id="formContainer">    
+                <ul id="addMusic">
+                  <li id="song-info-header">Enter song info:</li>
+                  <li>Title:</li>
+                  <li><input type="text" id="nameField" placeholder="Enter title here"></li>
+                  <li>Artist:</li>  
+                  <li><input type="text" id="artistField" placeholder="Enter artist here"></li>
+                  <li>Album:</li>  
+                  <li><input type="text" id="albumField" placeholder="Enter album here"></li>   
+                  <li><button id="addButton" data-dismiss="modal"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Add</button></li>
+                </ul>
       </div>
       </div>
   <!--_________SIDE NAV BAR___________________-->
-      <div class="col-sm-3" id="side-nav">
+      <div class="col-sm-3" id="filterNav">
       <form method="post">
-        <div class="inner-side-nav">
+        <div class="inner-filterNav">
           <label for="song-length">Song length:</label>
           <input type="range" name="song-length" min="0" max="10" step="1" value="5">
         </div>
-        <div class="inner-side-nav">
+        <div class="inner-filterNav">
           <label for="artist">Artist:</label>
           <select id="artist">
             <option>Options</option>
@@ -99,7 +107,7 @@
             <option>Pearl Jam</option>
           </select> 
         </div>
-        <div class="inner-side-nav">
+        <div class="inner-filterNav">
           <label for="album">Album:</label>
           <select id="album">
             <option>Options</option>
@@ -110,7 +118,7 @@
             <option>Ten</option>
           </select>
         </div>
-        <div class="inner-side-nav">
+        <div class="inner-filterNav">
           <label>Genre:</label>
             
               <table>
@@ -137,8 +145,8 @@
     
   <!--____________________MAIN WINDOW___________________-->
     
-      <div class="col-sm-7 col-sm-push-1" id="main-window">
-      <div id="song-list-container">
+      <div class="col-sm-7 col-sm-push-1" id="mainWindow">
+      <div id="listMusic">
       <!-- <div id="song-container">
       <h2>Something</h2>
       <ul class="song-info">
@@ -147,14 +155,16 @@
             <li class="song-info-border">Pop</li>
           </ul>
         </div> -->
-          </div>
-          <button id="more-button">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
+          <button id="addMore">More <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
       </div>
     </div>
-     </div>
-    </div>  
-  </div>
-  <script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+  </div>  
+</div>
+  <script data-main="javascripts/entry" src="./lib/bower_components/requirejs/require.js"></script>
+  <script src="./lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 
  </html>
