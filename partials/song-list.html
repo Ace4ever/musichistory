@@ -1,0 +1,9 @@
+<div>
+  <input type="text" ng-model="query" />
+</div>
+
+<div ng-repeat="song in songs | filter: query">
+  <h1>{{song.name}}</h1>
+  <p>{{song.artist}}</p>
+  <p>{{song.album}}</p>
+</div>

@@ -1,0 +1,44 @@
+
+  "songs": [
+    {
+      "id": "1",
+      "name": "Welcome to the Jungle", 
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction"
+    },    
+    {
+      "id": "2",
+      "name": "Sharp Dressed Man", 
+      "artist": "ZZ Top",
+      "album": "Eliminator"
+    },    
+    {
+      "id": "3",
+      "name": "I Like the Sound of That", 
+      "artist": "Rascal Flatts",
+      "album": "Rewind"
+    },    
+    {
+      "id": "4",
+      "name": "Drink You Away", 
+      "artist": "Justin Timberlake",
+      "album": "The 20/20 Experience"
+    },    
+    {
+      "id": "5",
+      "name": "Any Man of Mine", 
+      "artist": "Shania Twain",
+      "album": "The Woman In Me"
+    },    
+    {
+      "id": "6",
+      "name": "You Oughta Know", 
+      "artist": "Alanis Morissette",
+      "album": "Jagged Little Pill"
+    },    
+    {
+      "id": "7",
+      "name": "Fool's Gold", 
+      "artist": "One Direction",
+      "album": "FOUR"
+    },

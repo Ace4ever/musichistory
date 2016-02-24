@@ -1,0 +1,153 @@
+body {
+  font-family: Arial;
+  width: 98%;
+  height: 100%
+}
+
+body::after {
+  content: "";
+  background: url(musicBackground.jpeg);
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+header {
+    padding: 10px;
+    font-family: mySecondFont;
+    font-size: 50px;
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+nav {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 2);
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+}
+
+.filter-box {
+    width: 23%;
+    padding: 5px;
+    margin: 10px 0 0 0;
+    min-height: 500px;
+    float: left;
+}
+
+.song-box {
+    float: right;
+    width: 73%;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    min-height: 500px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.bordered {
+    border: 2px solid black;
+    padding-left: 5px;
+}
+
+fieldset {
+    border: none;
+}
+
+.left{
+    display: inline;
+    float: left;
+}
+
+.right{
+    display: inline;
+    float: right;
+}
+
+h1 {
+    color: #785616;
+    padding: 10px;
+}
+
+#bottom {
+    line-height: 25px;
+}
+
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('my font isnt funky enough.ttf'); 
+}
+
+@font-face {
+    font-family: 'mySecondFont';
+    src: url('krinkes/KrinkesDecorPERSONAL.ttf'); 
+}
+
+
+.theseSongs {
+    padding: 10px;
+    font-family: myFirstFont;
+}
+
+.newSong {
+    padding: 10px;
+    font-family: myFirstFont;
+}
+
+button {
+    background-color: #1C1C1C;
+    color: lightblue;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    display: inline;
+    /*margin-left: 40%;*/
+}
+
+ #filterButton {
+    margin-left: 40%;
+}
+
+#addMusic {
+    text-align: center;
+    padding: 8px;
+
+}
+
+#addMusic > div {
+    padding: 8px;
+}
+
+#doneButton {
+    text-decoration: none;
+}
